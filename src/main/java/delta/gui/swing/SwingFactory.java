@@ -1,5 +1,6 @@
 package delta.gui.swing;
 
+import delta.gui.control.BooleanDataController;
 import delta.gui.control.FormControlButtonsController;
 import delta.gui.control.LabelController;
 import delta.gui.control.TextDataController;
@@ -17,6 +18,15 @@ public class SwingFactory
   public LabelController buildLabelController()
   {
     return new SwingLabelController();
+  }
+
+  /**
+   * Build a boolean data controller.
+   * @return a new boolean data controller.
+   */
+  public BooleanDataController buildBooleanDataController()
+  {
+    return new SwingBooleanDataController();
   }
 
   /**

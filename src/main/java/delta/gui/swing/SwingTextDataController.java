@@ -21,6 +21,15 @@ public class SwingTextDataController implements TextDataController, SwingCompone
     _textField=new JTextField();
   }
 
+  /**
+   * Constructor.
+   * @param textField Associated text field.
+   */
+  public SwingTextDataController(JTextField textField)
+  {
+    _textField=textField;
+  }
+
   public void setValue(String text)
   {
     _textField.setText(text);

@@ -35,19 +35,19 @@ public class SwingFormButtonsController extends AbstractFormControlButtonsContro
 
   private void setPanel(JPanel panel)
   {
-    JButton okButton=SwingUtils.findComponentByName(panel,SwingFormButtonsController.OK_ID, JButton.class);
+    JButton okButton=SwingUtils.findComponentByName(panel,AbstractFormControlButtonsController.OK_ID, JButton.class);
     if (okButton!=null)
     {
         SwingButtonController okButtonController=new SwingButtonController(okButton);
         setOkButton(okButtonController);
     }
-    JButton cancelButton=SwingUtils.findComponentByName(panel,SwingFormButtonsController.CANCEL_ID, JButton.class);
+    JButton cancelButton=SwingUtils.findComponentByName(panel,AbstractFormControlButtonsController.CANCEL_ID, JButton.class);
     if (cancelButton!=null)
     {
         SwingButtonController cancelButtonController=new SwingButtonController(cancelButton);
         setCancelButton(cancelButtonController);
     }
-    JButton applyButton=SwingUtils.findComponentByName(panel,SwingFormButtonsController.APPLY_ID, JButton.class);
+    JButton applyButton=SwingUtils.findComponentByName(panel,AbstractFormControlButtonsController.APPLY_ID, JButton.class);
     if (applyButton!=null)
     {
         SwingButtonController applyButtonController=new SwingButtonController(applyButton);

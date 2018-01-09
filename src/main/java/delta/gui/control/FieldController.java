@@ -17,6 +17,15 @@ public class FieldController<T>
 
   /**
    * Constructor.
+   */
+  public FieldController()
+  {
+    _labelController=null;
+    _dataController=null;
+  }
+
+  /**
+   * Constructor.
    * @param labelController Controller for a label.
    * @param dataController Controller for a piece of data.
    */

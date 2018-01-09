@@ -20,6 +20,15 @@ public class SwingLabelController implements LabelController, SwingComponentProv
     _label=new JLabel();
   }
 
+  /**
+   * Constructor.
+   * @param label Associated label.
+   */
+  public SwingLabelController(JLabel label)
+  {
+    _label=label;
+  }
+
   public String getLabel()
   {
     return _label.getText();

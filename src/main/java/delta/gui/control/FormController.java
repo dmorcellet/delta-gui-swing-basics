@@ -1,7 +1,8 @@
 package delta.gui.control;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import delta.common.utils.collections.ListOrderedMap;
 
 /**
  * Base class for a form controller.
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class FormController<T>
 {
-  private List<FieldController<?>> _controllers;
+  private ListOrderedMap<FieldController<?>> _controllers;
 
   private T _value;
 
@@ -19,7 +20,7 @@ public class FormController<T>
    */
   public FormController()
   {
-    _controllers=new ArrayList<FieldController<?>>();
+    _controllers=new ListOrderedMap<FieldController<?>>();
   }
 
   /**
@@ -40,8 +41,34 @@ public class FormController<T>
     _value=value;
   }
 
-  protected void addController(FieldController<?> fieldController)
+  /**
+   * Register a controller.
+   * @param id Controller id.
+   * @param fieldController Field controller.
+   */
+  public void registerController(String id, FieldController<?> fieldController)
   {
-    _controllers.add(fieldController);
+    _controllers.put(id,fieldController);
+  }
+
+  /**
+   * Get a field controller.
+   * @param controllerClass Type of field controller.
+   * @param id Controller id.
+   * @return A field controller or <code>null</code> if not found.
+   */
+  @SuppressWarnings("unchecked")
+  public <FT> FieldController<FT> getController(Class<FT> controllerClass, String id)
+  {
+    return (FieldController<FT>)_controllers.get(id);
+  }
+
+  /**
+   * Get all registered controllers.
+   * @return A list of field controllers.
+   */
+  public List<FieldController<?>> getAllControllers()
+  {
+    return _controllers.values();
   }
 }
