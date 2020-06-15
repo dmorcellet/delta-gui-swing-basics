@@ -15,7 +15,8 @@ import java.awt.Insets;
 import javax.swing.JTable;
 
 /**
- * @author dm
+ * Test dialog.
+ * @author DAM
  */
 public class TestDialog extends JDialog
 {
@@ -26,6 +27,7 @@ public class TestDialog extends JDialog
 
   /**
    * Launch the application.
+   * @param args Not used.
    */
   public static void main(String[] args)
   {

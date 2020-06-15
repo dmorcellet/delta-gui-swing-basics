@@ -1,20 +1,25 @@
 package delta.gui.swing;
 
 /**
- * @author dm
+ * Sample test data.
+ * @author DAM
  */
 public class MyData
 {
   private String _text;
   private boolean _boolean;
 
+  /**
+   * Constructor.
+   */
   public MyData()
   {
-    
+    // Nothing
   }
 
   /**
-   * @return the text
+   * Get the value of the 'text' attribue.
+   * @return A string value.
    */
   public String getText()
   {
@@ -22,7 +27,8 @@ public class MyData
   }
 
   /**
-   * @param text the text to set
+   * Set the value of the 'text' attribute.
+   * @param text the value to set.
    */
   public void setText(String text)
   {
@@ -30,7 +36,8 @@ public class MyData
   }
 
   /**
-   * @return the boolean
+   * Get the value of the 'boolean' attribute.
+   * @return A boolean value.
    */
   public boolean isBoolean()
   {
@@ -38,11 +45,12 @@ public class MyData
   }
 
   /**
-   * @param b the boolean to set
+   * Set the value of the 'boolean' attribute.
+   * @param booleanValue the value to set.
    */
-  public void setBoolean(boolean b)
+  public void setBoolean(boolean booleanValue)
   {
-    _boolean=b;
+    _boolean=booleanValue;
   }
 
   @Override

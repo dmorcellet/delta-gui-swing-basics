@@ -4,7 +4,8 @@ import delta.gui.control.FieldController;
 import delta.gui.control.FormController;
 
 /**
- * @author dm
+ * Simple form controller for objects of type 'MyData'.
+ * @author DAM
  */
 public class MyFormController extends FormController<MyData>
 {
