@@ -8,7 +8,6 @@ import delta.gui.control.Callback;
 import delta.gui.control.CallbackData;
 import delta.gui.control.FormControlButtonsController;
 import delta.gui.control.GuiFactory;
-import delta.gui.swing.SwingFormButtonsController;
 
 /**
  * Test for form control buttons.
